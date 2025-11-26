@@ -1,8 +1,8 @@
-Hi Ujjal,
-
-I have completed the year-end review Excel sheet with all the required details. Please find the updated file attached for your review.
-Kindly let me know if any changes or additional inputs are needed from my side.
-
-Thank you for your guidance and support throughout the year.
-
-Regards,
+SELECT owner, name, type, line, text
+FROM   all_source
+WHERE  type = 'TRIGGER'
+AND    REGEXP_LIKE(
+         text,
+         'trn_type_cd\s*=\s*''[0-9]{3}''',
+         'i'
+       );
